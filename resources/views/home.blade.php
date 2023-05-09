@@ -7,7 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> {{ $welcome_message }}</h1>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{route('home')}}">Home</a></li>
+                <li><a href="{{route('about')}}">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1> {{ $welcome_message }}</h1>
+    </main>
 </body>
 </html>
 

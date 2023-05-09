@@ -25,4 +25,30 @@ Route::get('/home', function () {
 
 })->name('home');
 
-Route::get('/about', function ())
+Route::get('/about', function () {
+
+    $class_number = 'Classe 87';
+
+    $data = [
+        'class_number' => $class_number,
+        'students' => [
+            'Federico',
+            'Raffaele',
+            'Sonia',
+            'Alessia',
+            'Riccardo',
+            'Stefano',
+            'Nicola'
+        ],
+        'teachers' => [
+            'Simone',
+            'Simone',
+            'Daniele',
+            'Thomas'
+        ]
+    ];
+    
+    return view('about', $data);
+
+})->name('about');
+
